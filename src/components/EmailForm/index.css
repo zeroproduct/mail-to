@@ -1,0 +1,187 @@
+.app-container {
+  margin: 96px auto 0px;
+  width: 70%;
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 28px;
+  padding: 0px 0px 32px 0px;
+  background-color: #fafafa;
+  width: 100%;
+  text-align: center;
+}
+
+.email-header {
+  width: 100%;
+  border: 1px solid #d5d5d5;
+}
+
+.email-header-line {
+  padding: 16px;
+}
+
+.email-header-line, .email-body label {
+  font-size: 14px;
+  color: #a09ea4;
+  padding: 16px;
+}
+
+.email-header-line input {
+  height: 28px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  width: 80%;
+}
+
+.email-header-line input::selection {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+.email-header-line input::placeholder {
+  color: #a09ea4;
+  font-size: 14px;
+}
+
+.cc-bcc-container {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cc-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #d5d5d5;
+  cursor: pointer;
+  background-color: #8EBDB6;
+  margin: 0 8px;
+}
+
+.cc-button:focus {
+  outline: black dotted 1px;
+}
+
+.cc-button-selected {
+  background-color: #3E838C;
+}
+
+.email-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d5d5d5;
+  border-top: none;
+  border-bottom: none;
+}
+
+textarea {
+  border: none;
+  padding: 0 16px;
+  width: auto;
+  height: 100%;
+  resize: none;
+  font-size: 16px;
+  outline: none;
+}
+
+textarea::selection {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+textarea::placeholder {
+  color: #a09ea4;
+  font-size: 15px;
+}
+
+.email-body input {
+  margin: 0 auto 16px;
+  font-size: 16px;
+  border: 1px solid #d5d5d5;
+  outline: none;
+  text-align: center;
+  width: 33%;
+  padding: 12px;
+}
+
+.copy-prompt {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.copy-input {
+  text-align: center;
+  color: #a09ea4;
+  margin: 0 auto 16px;
+  border: 1px solid #d5d5d5;
+  padding: 8px;
+  width: max-content;
+}
+
+.copy-input:hover {
+  border: 1px solid #a09ea4;
+  color: #000000;
+}
+
+.generate-button {
+  padding: 16px 32px;
+  line-height: 10px;
+  margin: 0 auto 32px;
+  font-size: 14px;
+  border: 1px solid #d5d5d5;
+  cursor: pointer;
+  background-color: #8EBDB6;
+  outline: none;
+}
+
+.generate-button:focus {
+  outline: black dotted 1px;
+}
+
+.generate-button:hover, .cc-button:hover {
+  background-color: #3E838C;
+}
+
+.generate-button:active, .cc-button:active {
+  background-color: #195E63;
+}
+
+.generate-button::-moz-focus-inner, .cc-button::-moz-focus-inner {
+  border: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    width: 100%;
+  }
+
+  .email-header-line input {
+    width: 70%;
+  }
+
+  .cc-bcc-container {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .app-container {
+    width: 100%;
+  }
+
+  .email-header-line input {
+    width: 65%;
+  }
+
+  .cc-bcc-container {
+    width: 35%;
+  }
+}
